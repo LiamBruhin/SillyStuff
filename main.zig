@@ -30,8 +30,8 @@ pub fn main(init: std.process.Init) !void {
         try writer.print("{}", .{newNum});
         try writer.flush();
 
-        std.debug.print("{}\n", .{num});
-        std.debug.print("{}\n", .{newNum});
+        // std.debug.print("{}\n", .{num});
+        // std.debug.print("{}\n", .{newNum});
 
         var child = try std.process.spawn(init.io, .{
             .argv = &.{ "./commit.bat" },

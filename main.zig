@@ -24,7 +24,7 @@ pub fn main(init: std.process.Init) !void {
         @memset(buffer[0..], 0);
         _ = reader.readSliceAll(buffer[0..]) catch 0;
 
-        const num = try std.fmt.parseInt(i32, trimNewLine(&buffer), 10);
+        const num = try std.fmt.parseInt(i32, trimNewLine(&buffer), 0);
         const newNum = num + 1;
 
         try writer.print("{}", .{newNum});
